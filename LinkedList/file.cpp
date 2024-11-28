@@ -36,23 +36,30 @@ Node *removeTail(Node *head){
     delete head;
 }
 
+Node *printList(Node *head){
+    if(head == NULL || head->next == NULL){
+        return NULL;
+    }
+    while(head != NULL){
+        cout << head->data << " ";
+        head = head->next;
+    }
+    return head;
+}
+
 int main(){
     int arr[] = {1,2,3,4,5};
     int length = sizeof(arr)/sizeof(arr[0]);
     Node *head = new Node(arr[0]);
     Node *mover = head;
+    //Create LL from Array
     for(int i = 1; i < length; i++){
         Node *temp = new Node(arr[i]);
         mover->next = temp;
-        cout << " ";
-        mover = temp;
-        cout << mover->data; 
+        mover = mover->next;
     }
     cout << endl;
-    cout << head->data;
-    cout << endl;
-    removeHead(head);
-    cout << head->data;
+    printList(head);
 
     return 0;
 }
