@@ -1,0 +1,24 @@
+CREATE TABLE "passengers" (
+	"firstname" TEXT,
+	"lastname" TEXT,
+	"age" INTEGER
+);
+
+CREATE TABLE "check-ins" (
+	dateandtime
+	flight
+);
+
+CREATE TABLE "airlines" (
+	"name" TEXT,
+	"concourse" TEXT
+);
+
+CREATE TABLE "flights" (
+	"flight_no" INT,
+	"airline" TEXT,
+	"departure_airport" TEXT,
+	"arrival_airport" TEXT,
+	"departure_time",
+	"arrival_time"
+);
